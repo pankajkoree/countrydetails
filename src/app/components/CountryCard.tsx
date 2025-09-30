@@ -6,7 +6,7 @@ type CardProps = {
   flag: string;
   population: number;
   region: string;
-  capital: string;
+  capital?: string;
 };
 
 const CountryCard = ({
@@ -19,7 +19,7 @@ const CountryCard = ({
   return (
     <div>
       <Link href={`/${name}`}>
-        <Image src={flag} alt={`${name}+Flag`} />
+        <Image src={flag} alt={`${name}+Flag`} width={100} height={100} />
         <div>
           <h3>{name}</h3>
           <p>
